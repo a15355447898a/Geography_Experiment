@@ -1,0 +1,133 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4667,        125]
+NotebookOptionsPosition[      4172,        107]
+NotebookOutlinePosition[      4587,        124]
+CellTagsIndexPosition[      4544,        121]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"F", "[", 
+    RowBox[{"day_", ",", "hour_"}], "]"}], ":=", 
+   RowBox[{"QuantityMagnitude", "@", 
+    RowBox[{"SunPosition", "[", 
+     RowBox[{
+      RowBox[{"GeoPosition", "[", 
+       RowBox[{"{", 
+        RowBox[{"30.329024", ",", "120.158668"}], "}"}], "]"}], 
+      RowBox[{
+      "(*", "\:9ad8\:4e00\:4e00\:73ed\:6240\:5728\:7684\:7ecf\:7eac\:5ea6", 
+       "*)"}], ",", 
+      RowBox[{"DateObject", "[", 
+       RowBox[{"3818448000", "+", "day", "+", "hour"}], "]"}], 
+      RowBox[{"(*", 
+       RowBox[{"2021", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+        RowBox[{"0", "+", "\:5929", "+", "\:5c0f\:65f6"}]}], "*)"}], ",", 
+      RowBox[{"CelestialSystem", "\[Rule]", "\"\<Horizon\>\""}], ",", 
+      RowBox[{"AltitudeMethod", "\[Rule]", "\"\<ApparentAltitude\>\""}]}], 
+     "]"}]}]}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\:65b9\:4f4d\:89d2", "/", "\:9ad8\:5ea6"}], " ", 
+    RowBox[{"(", 
+     RowBox[{"az", "/", "alt"}], ")"}]}], "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<P:\\\\Users\\\\a1535\\\\Desktop\\\\\:5730\:7406\:5b9e\:9a8c\\\\\:9ad8\
+\:5ea6\:89d2\:4e0e\:65b9\:5411\:89d2\:7684\:6570\:636e2.xlsx\>\"", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"ParallelTable", "[", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"90", "+", "8.46227276685724"}], "<=", 
+          RowBox[{"First", "@", 
+           RowBox[{"F", "[", 
+            RowBox[{"\:5929", ",", "\:5c0f\:65f6"}], "]"}]}], "\[LessEqual]", 
+          RowBox[{"90", "+", "63.02912587697196"}]}], ")"}], "&&", 
+        RowBox[{"(", 
+         RowBox[{"20", "<=", 
+          RowBox[{"Last", "@", 
+           RowBox[{"F", "[", 
+            RowBox[{"\:5929", ",", "\:5c0f\:65f6"}], "]"}]}], "\[LessEqual]", 
+          "45"}], ")"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"DateObject", "[", 
+        RowBox[{"3818448000", "+", "\:5929", "+", "\:5c0f\:65f6"}], "]"}], 
+       ",", "\"\<\:65e0\>\""}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\:5c0f\:65f6", ",", "0", ",", 
+       RowBox[{"23", "*", "60", "*", "60"}], 
+       RowBox[{"(*", "\:628a\:5c0f\:65f6\:8f6c\:5316\:6210\:79d2", "*)"}], 
+       ",", 
+       RowBox[{"60", "*", "60"}]}], 
+      RowBox[{
+      "(*", "\:628a\:4e00\:5c0f\:65f6\:8f6c\:5316\:6210\:79d2", "*)"}], "}"}],
+      ",", 
+     RowBox[{"{", 
+      RowBox[{"\:5929", ",", "0", ",", 
+       RowBox[{"364", "*", "24", "*", "60", "*", "60"}], 
+       RowBox[{"(*", "\:628a\:5929\:8f6c\:5316\:6210\:5c0f\:65f6", "*)"}], 
+       ",", 
+       RowBox[{"24", "*", "60", "*", "60"}]}], 
+      RowBox[{"(*", "\:628a\:4e00\:5929\:8f6c\:5316\:6210\:79d2", "*)"}], 
+      "}"}]}], "\[IndentingNewLine]", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.8265992790614834`*^9, 3.8265993228494644`*^9}, {
+   3.826599354333439*^9, 3.82659939645293*^9}, {3.82659945036552*^9, 
+   3.826599504485941*^9}, {3.8265997751640816`*^9, 3.826599930200057*^9}, {
+   3.8265999719802866`*^9, 3.8265999839260254`*^9}, {3.8266003385548625`*^9, 
+   3.8266003662542295`*^9}, 3.826600481442391*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"ddf555a1-1f1c-4b42-bfcc-0e5cace5d6b5"],
+
+Cell[BoxData["\<\"P:\\\\Users\\\\a1535\\\\Desktop\\\\\:5730\:7406\:5b9e\:9a8c\
+\\\\\:9ad8\:5ea6\:89d2\:4e0e\:65b9\:5411\:89d2\:7684\:6570\:636e2.xlsx\"\>"], \
+"Output",
+ CellChangeTimes->{3.8266004316985884`*^9, 3.826600537304843*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"f656bf57-5421-41d5-828e-24b86f3ef160"]
+}, Open  ]]
+},
+WindowSize->{1118, 635},
+WindowMargins->{{58, Automatic}, {-136, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (2020\:5e744\:670815\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"57c7c710-e4e5-45ea-ab6f-8d2cfa7e2be7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3261, 76, 271, "Input",ExpressionUUID->"ddf555a1-1f1c-4b42-bfcc-0e5cace5d6b5"],
+Cell[3844, 100, 312, 4, 32, "Output",ExpressionUUID->"f656bf57-5421-41d5-828e-24b86f3ef160"]
+}, Open  ]]
+}
+]
+*)
+
